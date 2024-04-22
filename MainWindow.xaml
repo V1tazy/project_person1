@@ -1,0 +1,15 @@
+﻿<Window x:Class="project_person.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project_person"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Menu>
+            <MenuItem x:Name="Employee" Header="Сотрудники" Click="Employee_Click"/>
+            <MenuItem x:Name="Role" Header="Должности" Click="Role_Click"/>
+        </Menu>
+    </Grid>
+</Window>
