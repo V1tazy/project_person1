@@ -1,4 +1,5 @@
 ﻿using project_person.View;
+using project_person.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,10 @@ namespace project_person
     /// </summary>
     public partial class MainWindow : Window
     {
+        internal static PersonViewModel vmPerson;
+
         public static int IdRole { get; set; }
+        public static int IdEmployee {  get; set; }
         public MainWindow()
         {
             InitializeComponent();
