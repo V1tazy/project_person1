@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace project_person.ViewModel
 {
-    public class RoleModelView
+    public class RoleViewModel
     {
-        ObservableCollection<Role> ListRole = 
+        public ObservableCollection<Role> ListRole = 
             new ObservableCollection<Role> ();
         
-
-        public RoleModelView()
+        public RoleViewModel()
         {
             this.ListRole.Add(
                 new Role()

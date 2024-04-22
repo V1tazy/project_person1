@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project_person.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace project_person.View
         public WindowRole()
         {
             InitializeComponent();
+            RoleViewModel vmRole = new RoleViewModel();
+            lvRole.ItemsSource = vmRole.ListRole;
         }
     }
 }

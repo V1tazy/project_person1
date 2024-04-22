@@ -55,8 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helper\FindRole.cs" />
+    <Compile Include="Helper\PersonDPO.cs" />
     <Compile Include="ViewModel\PersonViewModel.cs" />
-    <Compile Include="ViewModel\RoleModelView.cs" />
+    <Compile Include="ViewModel\RoleViewModel_1.cs" />
     <Compile Include="View\WindowEmployee.xaml.cs">
       <DependentUpon>WindowEmployee.xaml</DependentUpon>
     </Compile>

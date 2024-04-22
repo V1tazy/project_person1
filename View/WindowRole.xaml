@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project_person.View"
         mc:Ignorable="d"
-        Title="WindowRole" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Должности" Height="300" Width="300">
+    <StackPanel Background="#FFD8D8D8">
+        <Label Margin="5" HorizontalAlignment="Center">Список должностей сотрудников</Label>
+        <ListView x:Name="lvRole" Background="#FFD3CDCD">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Код" Width="50"
+                                        DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Наименование должности"
+                                        DisplayMemberBinding="{Binding NameRole}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>
