@@ -8,11 +8,11 @@
         Title="Сотрудники" Height="300" Width="500">
     <StackPanel>
         <StackPanel Orientation="Horizontal" Background="#EFE4E0E0">
-            <Button x:Name="btnAdd" Margin="10, 10, 5, 10" Content="Добавить" Height="25" Click="btnAdd_Click"/>
-            <Button x:Name="btnEdit" Margin="10, 10, 5, 10" Content="Редактировать" Height="25" Click="btnEdit_Click"/>
-            <Button x:Name="btnDelete" Margin="10, 10, 5, 10" Content="Удалить" Height="25" Click="btnDelete_Click"></Button>
+            <Button x:Name="btnAdd" Content="Добавить" Command="{Binding AddPerson}" Style="{StaticResource ButtonMenu}"/>
+            <Button x:Name="btnEdit" Content="Редактировать" Command="{Binding EditPerson}" Style="{StaticResource ButtonMenu}"/>
+            <Button x:Name="btnDelete" Content="Удалить" Command="{Binding DeletePerson}" Style="{StaticResource ButtonMenu}"/>
         </StackPanel>
-        <ListView x:Name="lvEmployee">
+        <ListView x:Name="lvEmployee" ItemsSource="{Binding ListPersonDpo}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
@@ -23,7 +23,7 @@
                         <GridViewColumn Header="Имя" 
                                         DisplayMemberBinding="{Binding FirstName}"/>
                         <GridViewColumn Header="Должность" 
-                                        DisplayMemberBinding="{Binding Role}"/>
+                                        DisplayMemberBinding="{Binding RoleName}"/>
                         <GridViewColumn Header="Дата рождения" 
                                         DisplayMemberBinding="{Binding Birthday, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>
                     </GridView.Columns>

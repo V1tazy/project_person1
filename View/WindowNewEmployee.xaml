@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:project_person.View"
+        xmlns:local="clr-namespace:project_person.View" xmlns:viewmodel="clr-namespace:project_person.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:PersonViewModel}"
         mc:Ignorable="d"
         Height="270" Width="300">
     <Grid>

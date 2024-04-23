@@ -27,13 +27,13 @@ namespace project_person.Model
             this.Birthday = birthday;
         }
 
-        public Person CopyFromPersonDBO(PersonDPO p)
+        public Person CopyFromPersonDPO(PersonDPO p)
         {
             RoleViewModel vmRole = new RoleViewModel();
             int roleId = 0;
             foreach (var r in vmRole.ListRole)
             {
-                if (r.NameRole == p.Role)
+                if (r.NameRole == p.RoleName)
                 {
                     roleId = r.Id;
                     break;

@@ -8,12 +8,12 @@
         Title="Должности" Height="300" Width="300">
     <StackPanel Background="#FFD8D8D8">
         <StackPanel Orientation="Horizontal" Background="#EFE4E0E0">
-            <Button x:Name="btnAdd" Margin="10, 10, 5, 10" Content="Добавить" Height="25" Click="btnAdd_Click"/>
-            <Button x:Name="btnEdit" Margin="10, 10, 5, 10" Content="Редактировать" Height="25" Click="btnEdit_Click"/>
-            <Button x:Name="btnDelete" Margin="10, 10, 5, 10" Content="Удалить" Height="25" Click="btnDelete_Click"></Button>
+            <Button x:Name="btnAdd" Content="Добавить" Command="{Binding AddRole}" Style="{StaticResource ButtonMenu}"/>
+            <Button Content="Редактировать" Command="{Binding EditRole}" Style="{StaticResource ButtonMenu}"/>
+            <Button x:Name="btnDelete" Content="Удалить" Command="{Binding DeleteRole}" Style="{StaticResource ButtonMenu}"></Button>
         </StackPanel>
         <Label Margin="5" HorizontalAlignment="Center">Список должностей сотрудников</Label>
-        <ListView x:Name="lvRole" Background="#FFD3CDCD">
+        <ListView x:Name="lvRole" Background="#FFD3CDCD" ItemsSource="{Binding ListRole}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
