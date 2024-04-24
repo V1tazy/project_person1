@@ -67,7 +67,6 @@ namespace project_person.ViewModel
                     {
                         Title = "Новый сотрудник"
                     };
-                    // формирование кода нового собрудника
                     int maxIdPerson = MaxId() + 1;
                     PersonDPO per = new PersonDPO
                     {
@@ -94,9 +93,9 @@ namespace project_person.ViewModel
                             }
                             catch (Exception e)
                             {
-                                Error = "Ошибка добавления данных в json файл\n" +
-                e.Message;
+                                Error = "Ошибка добавления данных в json файл\n" + e.Message;
                             }
+                            SelectedPersonDpo = per;
                         }
                     }
                
@@ -140,7 +139,6 @@ namespace project_person.ViewModel
                                 }
                             try
                                 {
-                                // сохраненее данных в файле json
                                 SaveChanges(ListPerson);
                             }
                             catch (Exception e)
@@ -148,6 +146,7 @@ namespace project_person.ViewModel
             
                             Error = "Ошибка редактирования данных в json файл\n" + e.Message;
                             }
+                            SelectedPersonDpo = personDpo;
                         }
                         else
                         {

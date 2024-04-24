@@ -101,6 +101,7 @@ namespace project_person.ViewModel
                             role.NameRole = tempRole.NameRole;
                             SaveChanges(ListRole);
                         }
+                        SelectedRole = role;
                     }, (obj => SelectedRole != null && ListRole.Count > 0)
                     ));
             }
@@ -122,6 +123,7 @@ namespace project_person.ViewModel
                         ListRole.Remove(role);
                         SaveChanges(ListRole);
                     }
+                    SelectedRole = role;
                 }, (obj) => SelectedRole != null && ListRole.Count > 0));
             }
         }
