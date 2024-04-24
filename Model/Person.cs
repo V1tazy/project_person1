@@ -14,11 +14,11 @@ namespace project_person.Model
         public int RoleId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
+        public string Birthday { get; set; }
         
         public Person() { }
 
-        public Person(int id, int roleId, string firstName, string lastName, DateTime birthday)
+        public Person(int id, int roleId, string firstName, string lastName, string birthday)
         {
             this.Id = id;
             this.RoleId = roleId;

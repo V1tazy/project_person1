@@ -25,7 +25,7 @@
                         <GridViewColumn Header="Должность" 
                                         DisplayMemberBinding="{Binding RoleName}"/>
                         <GridViewColumn Header="Дата рождения" 
-                                        DisplayMemberBinding="{Binding Birthday, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>
+                                        DisplayMemberBinding="{Binding Birthday}"/>
                     </GridView.Columns>
                 </GridView>
             </ListView.View>

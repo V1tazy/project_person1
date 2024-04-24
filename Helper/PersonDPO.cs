@@ -47,8 +47,8 @@ namespace project_person.Helper
             }
         }
 
-        private DateTime birthday;
-        public DateTime Birthday {
+        private string birthday;
+        public string Birthday {
             get { return birthday; }
             set
             {
@@ -59,7 +59,7 @@ namespace project_person.Helper
         
         public PersonDPO() { }
 
-        public PersonDPO(int id, string role, string firstName, string lastName, DateTime birthday)
+        public PersonDPO(int id, string role, string firstName, string lastName, string birthday)
         {
             this.Id = id;
             this.RoleName = role;
@@ -106,5 +106,9 @@ namespace project_person.Helper
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        public static string GetStringBirthday(string birthday)
+        {
+            return String.Format("{0:dd\\.}{0:MM\\.}{0:yyyy}", birthday);
+        }
     }
 }
