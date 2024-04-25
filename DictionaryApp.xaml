@@ -8,4 +8,12 @@
         <Setter Property="Control.Padding" Value="5,0,5,0"/>
         <Setter Property="Control.BorderThickness" Value="2"/>
     </Style>
+
+    <Style x:Key="TextBoxDate" TargetType="TextBox">
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Visibility" Value="Hidden"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>
