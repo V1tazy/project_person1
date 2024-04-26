@@ -1,5 +1,6 @@
-﻿using project_person.Model;
-using project_person.ViewModel;
+﻿using project_person.ViewModel;
+using sotrudniki.Model;
+using sotrudniki.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +16,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace project_person.View
+namespace sotrudniki.View
 {
+    /// <summary>
+    /// Логика взаимодействия для WindowRole.xaml
+    /// </summary>
     public partial class WindowRole : Window
     {
-        private RoleViewModel vmRole;
+        RoleViewModel vmRole;
         public WindowRole()
         {
             InitializeComponent();
-            DataContext = new RoleViewModel();
+            vmRole = new RoleViewModel();
+            DataContext = vmRole;
+        }
+
+        private void RoleListView_Select(object sender, SelectionChangedEventArgs e)
+        {
+            if (LvRole.SelectedItem != null)
+            {
+                vmRole.SelectedRole = (Role)LvRole.SelectedItem;
+            }
         }
     }
 }
